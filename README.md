@@ -1,5 +1,5 @@
 # crossageeffect
-A Matlab and Python based, executable, Cross-Age Effect test app. It is subject to change as the app directly related with my MSc thesis work. 
+A Matlab and Python based, executable, Cross-Age Effect test app. It is subject to change as the app is directly related with my MSc thesis work. 
   
 Update @ 18.05.2018  
 You can find the executable Python files below, for Windows and MacOS separately.  

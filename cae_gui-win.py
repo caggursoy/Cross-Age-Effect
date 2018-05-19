@@ -42,7 +42,10 @@ for i in rng:
         ageGuess = input('Please enter your age guess: ')
         guessList.append(ageGuess);
         auxSize = len(auxStr);
-        actualAge = int(float(auxStr[auxSize-6:auxSize-4])); #-6,-4
+        if auxStr[-5] == 'a' or auxStr[-5] == 'b': # check if unwanted smt
+            actualAge = int(float(auxStr[auxSize-7:auxSize-5]));
+        else:
+            actualAge = int(float(auxStr[auxSize-6:auxSize-4]));
         actualAgeList.append(actualAge);
 print("Guessed")
 print(guessList)

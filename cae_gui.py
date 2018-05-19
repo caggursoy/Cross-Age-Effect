@@ -25,7 +25,7 @@ guessList = [];
 fileList = [];
 actualAgeList = [];
 files = os.listdir(imgDir); # get all the image filenames
-rng = range(0,25); # adjust range
+rng = range(0,25); # adjust range (25)
 for i in rng:
     idx = randint(0,len(imgDir)-1)
     img = imgDir+'/'+files[idx];
@@ -43,7 +43,10 @@ for i in rng:
         ageGuess = input('Please enter your age guess: ')
         guessList.append(ageGuess);
         auxSize = len(auxStr);
-        actualAge = int(float(auxStr[auxSize-6:auxSize-4])); #-6,-4
+        if auxStr[-5] == 'a' or auxStr[-5] == 'b': # check if unwanted smt
+            actualAge = int(float(auxStr[auxSize-7:auxSize-5]));
+        else:
+            actualAge = int(float(auxStr[auxSize-6:auxSize-4]));
         actualAgeList.append(actualAge);
 print("Guessed")
 print(guessList)

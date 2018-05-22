@@ -5,7 +5,7 @@ from random import randint
 import matplotlib.pyplot as plt
 import numpy as np
 from operator import itemgetter
-
+##
 fileName = 'dataReader.py'; # enter the name of the file
 strPath = os.path.realpath(fileName); # get the path of the file
 fileSiz = len(fileName); #filename size

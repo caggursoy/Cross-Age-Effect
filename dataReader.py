@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 import csv
 import os
+import cv2
 from random import randint
 import matplotlib.pyplot as plt
 import numpy as np
 from operator import itemgetter
-##
+
 fileName = 'dataReader.py'; # enter the name of the file
 strPath = os.path.realpath(fileName); # get the path of the file
 fileSiz = len(fileName); #filename size
@@ -19,9 +20,12 @@ imgsFreqs = []; imgsFreqSorted = []; mostFreqImgs = []; freqList = [];
 mostFreqImNames = []; freqListSorted = []; plotImgs =[]; plotNames = [];
 plotAges = []; plotActuals = []; plotGuesses = [];
 for qq in files:
+    # print[qq]
     if qq[0] == ".":
+        # print(qq)
         files.remove(qq);
 k=0;
+# print(files)
 for ff in files:
     toRead = 'All/' + ff;
     # print(ff)
@@ -49,7 +53,7 @@ for ll in genList:
     guess = guess.replace("]","")
     guess = guess.replace(" ","")
     subGuess = guess.split(",")
-    subGuess = map(float, subGuess) 
+    subGuess = map(float, subGuess)
     guessList.append(subGuess)
     actual = ''.join(map(str, ll[5]))
     actual = actual[13:len(actual)]
@@ -77,11 +81,14 @@ for ww in imgsList:
     imgsFreqs.append([ww, cnt])
     cnt = 0
 imgsFreqs = (sorted(imgsFreqs, key=itemgetter(1)));
+# print(imgsFreqs)
 for rr in imgsFreqs:
     if rr not in imgsFreqSorted:
         imgsFreqSorted.append(rr)
-numOfFreqImgs = 5 # number of most frequent images
+# print(len(imgsFreqSorted))
+numOfFreqImgs = len(imgsFreqSorted) # number of most frequent images (if freq >= 5, show -> 47)
 mostFreqImgs = list(reversed(imgsFreqSorted[len(imgsFreqSorted)-numOfFreqImgs:len(imgsFreqSorted)]))
+print(mostFreqImgs)
 for nn in mostFreqImgs:
     mostFreqImNames.append(nn[0])
 indices = len(imageList)
@@ -91,7 +98,7 @@ for ids in range(0,indices-1):
         if qq[rr] in mostFreqImNames:
             freqList.append((qq[rr],nameList[ids],ageList[ids],(actualList[ids])[rr],(guessList[ids])[rr]))
 freqListSorted = (sorted(freqList, key=itemgetter(0)));
-# print(freqListSorted[0][0])
+# print(freqListSorted)
 for nx in freqListSorted:
     plotImgs.append(nx[0]) # image names
     plotNames.append(nx[1]) # participant names
@@ -109,15 +116,45 @@ for oo in freqListSorted:
         ind2.append(cntt)
     cntt=cntt+1
 ind2.insert(0,0)
-for tt in range(0,cntOfUnq-1):
-  plt.figure(figsize=(10,8))
-  plt.plot(plotAges[ind2[tt]:ind2[tt+1]],'rx')
-  plt.plot(plotActuals[ind2[tt]:ind2[tt+1]],'bo')
-  plt.plot(plotGuesses[ind2[tt]:ind2[tt+1]],'go')
-  plt.axis([-1, len(plotAges[ind2[tt]:ind2[tt+1]]), -10, 80])
-  plt.title(plotImgs[ind2[tt]])
-  plt.ylabel('Ages')
-  plt.xlabel('Trial index')
-  plt.legend(('Age','Actual', 'Guessed')) # loc='upper right'
-  plt.grid()
-  plt.show()
+# print(freqListSorted)
+# Show results
+# for tt in range(0,cntOfUnq-1):
+#   plt.figure(figsize=(10,8))
+#   plt.plot(plotAges[ind2[tt]:ind2[tt+1]],'rx')
+#   plt.plot(plotActuals[ind2[tt]:ind2[tt+1]],'bo')
+#   plt.plot(plotGuesses[ind2[tt]:ind2[tt+1]],'go')
+#   plt.axis([-1, len(plotAges[ind2[tt]:ind2[tt+1]]), -10, 80])
+#   plt.title(plotImgs[ind2[tt]])
+#   plt.ylabel('Ages')
+#   plt.xlabel('Trial index')
+#   plt.legend(('Age','Actual', 'Guessed')) # loc='upper right'
+#   plt.grid()
+#   plt.show()
+  # img = '/Volumes/Storage/Pythonfiles/crossageeffect/images/' + plotImgs[ind2[tt]]
+  # imgMat = cv2.imread(img);
+  # winname = 'Images'
+  # cv2.namedWindow(winname)        # Create a named window
+  # cv2.moveWindow(winname, 40,30)  # Move it to (40,30)
+  # cv2.imshow(winname, imgMat)
+  # cv2.waitKey(5000)
+  # cv2.destroyAllWindows()
+# Write results
+cct = 0;
+with open('result.csv','wb') as file: # Create file and
+  for nm in freqListSorted:
+      for mn in nm:
+          file.write(str(mn)+",") # write the results to csv
+          cct=cct+1
+          if cct == 5:
+            file.write("\n")
+            cct = 0
+
+cct = 0;
+with open('result2.csv','wb') as file:
+    for qp in mostFreqImgs:
+        for pq in qp:
+            file.write(str(pq)+",")
+            cct=cct+1
+            if cct==2:
+                file.write("\n")
+                cct=0

@@ -6,6 +6,9 @@ Update @ 23.02.2019
 Old code for Behavioural test is moved to legacy folder.  
 A new folder for Keras based DeepNet Age Classifier is created and necessary files were uploaded. Comments for each file will be inserted in order to increase readability of the code.  
 
+Visualization of the DeepNet model is as following:  
+![alt text](https://github.com/caggursoy/crossageeffect/blob/master/caeMLGPU/cae-model_200px.png)
+
 Update @ 07.10.2018  
 The Python code is updated as a new facial image dataset from Park Aging Mind Lab at UTDallas has arrived.  
 You can find further info about them from the following webpage: http://agingmind.utdallas.edu  

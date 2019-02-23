@@ -6,16 +6,6 @@ Update @ 23.02.2019
 Old code for Behavioural test is moved to legacy folder.  
 A new folder for Keras based DeepNet Age Classifier is created and necessary files were uploaded. Comments for each file will be inserted in order to increase readability of the code.  
 
-Current performance of the DeepNet with the faces dataset that it is trained:  
-| Exactly Predicted | Predicted in -/+ 5 range | Predicted in -/+ 10 range |
-| --- | --- | --- |
-| 63.45%  | 77.41%  | 85.34%  |
-  
-Current performance of the DeepNet with the faces dataset that it is not trained:  
-| Exactly Predicted | Predicted in -/+ 5 range | Predicted in -/+ 10 range |
-| --- | --- | --- |
-| 29.84%  | 55.81%  | 67.83%  |
-
 Visualization of the DeepNet model is as following:  
 ![alt text](https://github.com/caggursoy/crossageeffect/blob/master/caeMLGPU/cae-model_200px.png)
 

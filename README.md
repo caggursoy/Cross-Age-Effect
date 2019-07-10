@@ -3,7 +3,7 @@ A Keras based, DeepNet Age Classifier. The behavioural test is moved to: http://
 It is subject to change as the app is directly related with my MSc thesis work.
 
 Update @ 10.07.2019
-As my thesis is complete, the whole code will be released here with the how-to-run readmes soon.
+As my thesis comes to a conclusion, the whole code will be released here with the how-to-run readmes soon.
 
 Update @ 23.02.2019
 Old code for Behavioural test is moved to legacy folder.  

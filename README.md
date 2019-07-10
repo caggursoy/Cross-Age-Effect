@@ -2,6 +2,9 @@
 A Keras based, DeepNet Age Classifier. The behavioural test is moved to: http://cagataygursoy.xyz.  
 It is subject to change as the app is directly related with my MSc thesis work.
 
+Update @ 10.07.2019
+As my thesis is complete, the whole code will be released here with the how-to-run readmes soon.
+
 Update @ 23.02.2019
 Old code for Behavioural test is moved to legacy folder.  
 A new folder for Keras based DeepNet Age Classifier is created and necessary files were uploaded. Comments for each file will be inserted in order to increase readability of the code.  

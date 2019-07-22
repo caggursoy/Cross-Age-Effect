@@ -1,6 +1,18 @@
 # crossageeffect
 A Keras based, DeepNet Age Classifier. The behavioural test is moved to: http://cagataygursoy.xyz.  
-It is subject to change as the app is directly related with my MSc thesis work.
+It is subject to change as the app is directly related with my MSc thesis work and more updates may come in the future.
+Right now will the classifier only work with Park Aging Mind Lab's (PAML) Aging Dataset's Neutral Face dataset. For other datasets, some filename extracting alterations and other changes might be required.  
+
+I have used Yann LeCun's LeNet for the classifier's basis. More info on LeCun and LeNet here: http://yann.lecun.com/exdb/lenet/
+
+More info about PAML can be find here: http://agingmind.utdallas.edu/  
+
+During Deep Learning implementation, I have used various sources and tutorials. PyImageSearch's following two tutorials were the key tutorials that I have implemented my classifier upon:  
+1) Tutorial about LeNet: https://www.pyimagesearch.com/2016/08/01/lenet-convolutional-neural-network-in-python/
+2) Tutorial about image classification: https://www.pyimagesearch.com/2017/12/11/image-classification-with-keras-and-deep-learning/
+  
+Update @ 23.07.2019
+My thesis is done with the future work. I will be publishing the codes and intermediate layer activation output images here shortly. Moreover, the thesis will be published in my website.
 
 Update @ 10.07.2019
 As my thesis comes to a conclusion, the whole code will be released here with the how-to-run readmes soon.
@@ -8,14 +20,6 @@ As my thesis comes to a conclusion, the whole code will be released here with th
 Update @ 23.02.2019
 Old code for Behavioural test is moved to legacy folder.  
 A new folder for Keras based DeepNet Age Classifier is created and necessary files were uploaded. Comments for each file will be inserted in order to increase readability of the code.  
-
-| Image Database Type | Exact Match  | Prediction in +/- 5 range | Prediction in +/- 10 range |
-| ------------- | ------------- | ------------- | ------------- |
-| Model is familiar with images | 63.45%  | 77.41%  | 85.34% |
-| Model is not familiar with images  | 29.84%  | 55.81% | 67.83% |
-
-Visualization of the DeepNet model is as following:  
-![alt text](https://github.com/caggursoy/crossageeffect/blob/master/caeMLGPU/cae-model_200px.png)
 
 Update @ 07.10.2018  
 The Python code is updated as a new facial image dataset from Park Aging Mind Lab at UTDallas has arrived.  

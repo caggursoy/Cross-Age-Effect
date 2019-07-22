@@ -11,6 +11,8 @@ During Deep Learning implementation, I have used various sources and tutorials. 
 1) Tutorial about LeNet: https://www.pyimagesearch.com/2016/08/01/lenet-convolutional-neural-network-in-python/
 2) Tutorial about image classification: https://www.pyimagesearch.com/2017/12/11/image-classification-with-keras-and-deep-learning/
   
+For GradCam codes, I have heavily influenced from eclique's really useful repository called Keras-Gradcam. More info on: https://github.com/eclique/keras-gradcam/blob/master/grad_cam.py
+  
 Update @ 23.07.2019
 My thesis is completed right now. I will be publishing the codes and intermediate layer activation output images here shortly. Moreover, the thesis will be published in my website.
 

@@ -12,7 +12,7 @@ During Deep Learning implementation, I have used various sources and tutorials. 
 2) Tutorial about image classification: https://www.pyimagesearch.com/2017/12/11/image-classification-with-keras-and-deep-learning/
   
 Update @ 23.07.2019
-My thesis is done with the future work. I will be publishing the codes and intermediate layer activation output images here shortly. Moreover, the thesis will be published in my website.
+My thesis is completed right now. I will be publishing the codes and intermediate layer activation output images here shortly. Moreover, the thesis will be published in my website.
 
 Update @ 10.07.2019
 As my thesis comes to a conclusion, the whole code will be released here with the how-to-run readmes soon.

@@ -1,5 +1,6 @@
 # USAGE
 # python test_network.py --model cae-model.model
+# import PlaidML first
 import plaidml.keras
 plaidml.keras.install_backend()
 # import the necessary packages

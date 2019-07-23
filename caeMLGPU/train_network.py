@@ -1,5 +1,6 @@
 # USAGE
 # python train_network.py --dataset images --model cae-model.model
+# import PlaidML first
 import plaidml.keras
 plaidml.keras.install_backend()
 # set the matplotlib backend so figures can be saved in the background
@@ -34,7 +35,7 @@ ap.add_argument("-p", "--plot", type=str, default="plot.png",
 	help="path to output loss/accuracy plot")
 args = vars(ap.parse_args())
 
-# initialize the number of epochs to train for, initia learning rate,
+# initialize the number of epochs to train for, initial learning rate,
 # and batch size
 EPOCHS = 500
 INIT_LR = 1e-3  #1e-3
@@ -76,7 +77,7 @@ labels = np.array(labels)
 # the data for training and the remaining 20% for testing and 20% for validation
 (trainX, testX, trainY, testY) = train_test_split(data,
 	labels, test_size=0.2, random_state=1)
-	
+
 # validation split
 (trainX, valX, trainY, valY) = train_test_split(trainX,
 	trainY, test_size=0.25, random_state=1)
@@ -116,8 +117,6 @@ model.save(args["model"])
 plt.style.use("ggplot")
 plt.figure()
 N = EPOCHS
-# plt.plot(np.arange(0, N), H.history["loss"], label="train_loss")
-# plt.plot(np.arange(0, N), H.history["val_loss"], label="val_loss")
 plt.plot(np.arange(0, N), H.history["acc"], label="train_acc")
 plt.plot(np.arange(0, N), H.history["val_acc"], label="val_acc")
 plt.title("Training Loss and Accuracy")

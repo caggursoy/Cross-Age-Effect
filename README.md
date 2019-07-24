@@ -40,3 +40,5 @@ Previously used face image dataset is provided from FG-NET group's facial databa
 About FG-NET: http://www-prima.inrialpes.fr/FGnet/html/about.html  
 Since FG-NET is not distributing their database right now, I have reached their dataset thanks to Yangwei Fu.  
 About Yangwei Fu: http://yanweifu.github.io/FG_NET_data/  
+
+[License](https://github.com/caggursoy/crossageeffect/blob/master/LICENSE)

@@ -1,7 +1,9 @@
 # Cross-Age Effect Classifier
 A Keras based, DeepNet Age Classifier. The behavioural test is moved to: http://cagataygursoy.xyz.  
 
-It is subject to change as the app is directly related with my MSc thesis work and more updates may come in the future.
+The classifier is directly linked to my Master of Science studies at METU CogSci. You may find my thesis in pdf format from [here](https://github.com/caggursoy/Cross-Age-Effect/blob/master/necati_cagatay_gursoy_msc_thesis.pdf).  
+
+It is subject to change as the classifier is directly related with my MSc thesis work and more updates may come in the future.
 Right now will the classifier only work with Park Aging Mind Lab's (PAML) Aging Dataset's Neutral Face dataset. For other datasets, some filename extracting alterations and other changes might be required.  
 
 I have used Yann LeCun's LeNet for the classifier's basis. More info on LeCun and LeNet here: http://yann.lecun.com/exdb/lenet/

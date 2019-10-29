@@ -1,7 +1,7 @@
 # Cross-Age Effect Classifier
 A Keras based, DeepNet Age Classifier.
 
-The classifier is directly linked to my Master of Science studies at METU CogSci. Since I am a dedicated supporter of [Open Science](https://www.fosteropenscience.eu/content/what-open-science-introduction), I have released my thesis in pdf format in this [repository](https://github.com/caggursoy/Cross-Age-Effect/blob/master/necati_cagatay_gursoy_msc_thesis.pdf) and in my personal [webpage](http://cagataygursoy.xyz/).  
+The classifier is directly linked to my Master of Science studies at METU CogSci. Since I am a dedicated supporter of [Open Science](https://www.fosteropenscience.eu/content/what-open-science-introduction), I have released my thesis in pdf format in this [repository](https://github.com/caggursoy/Cross-Age-Effect/blob/master/necati_cagatay_gursoy_msc_thesis.pdf) and in my personal [webpage](http://cagataygursoy.com/).  
 
 It is subject to change as the classifier is directly related with my MSc thesis work and more updates may come in the future.
 Right now will the classifier only work with Park Aging Mind Lab's (PAML) Aging Dataset's Neutral Face dataset. For other datasets, some filename extracting alterations and other changes might be required.  

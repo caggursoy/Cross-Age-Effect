@@ -25,11 +25,27 @@ def copyFiles(dstPath, srcPath, list):
         src = srcPath / imgName
         copyfile(src, dst)
 
+def copyFilesAge(dstPath, srcPath, list):
+    for imgName in list: # copy the targets to target folder
+        auxSize = len(imgName)
+        start = imgName.index('male')+4
+        end = start + 2
+        if imgName[start] == "_" or imgName[start] == "+" :
+            age = int(float(imgName[start+1:end+1]))
+        else:
+            age = int(float(imgName[start:end]))
+        auxPathTrn = dstPath / str(age)
+        if not os.path.exists(auxPathTrn): # If folder does not exist
+            os.makedirs(auxPathTrn) # create folder
+        dst = auxPathTrn / imgName
+        src = srcPath / imgName
+        copyfile(src, dst)
+
 ## start code
-mainPath = Path()
+mainPath = Path.cwd()
 exPath = mainPath / "imagesAll/examples"
-trainPath = mainPath / "imagesAll/train"
-valPath = mainPath / "imagesAll/val"
+trainPath = mainPath / "images/train"
+valPath = mainPath / "images/val"
 mainPath = mainPath / "imagesAll"
 # create directories
 createDir(exPath)
@@ -51,12 +67,11 @@ numTrain = numFiles*.6
 numVal = numFiles*.2
 # get 20% test data
 numTest = numFiles*.2
-print(numTrain, numVal, numTest)
 # get random k number of targets
 [files, trainList] = splitImgs(files, numTrain)
 [files, valList] = splitImgs(files, numVal)
 [files, testList] = splitImgs(files, numTest)
 # copy the files respectively
 copyFiles(exPath, mainPath, testList)
-copyFiles(valPath, mainPath, valList)
-copyFiles(trainPath, mainPath, trainList)
+copyFilesAge(valPath, mainPath, valList)
+copyFilesAge(trainPath, mainPath, trainList)

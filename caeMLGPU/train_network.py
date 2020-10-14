@@ -6,7 +6,6 @@ plaidml.keras.install_backend()
 # set the matplotlib backend so figures can be saved in the background
 import matplotlib
 matplotlib.use("Agg")
-
 # import the necessary packages
 from keras.preprocessing.image import img_to_array
 from keras.preprocessing.image import ImageDataGenerator
@@ -77,7 +76,6 @@ for imagePath in trainImgPaths:
 	# extract the class label from the image path and update the
 	# labels list
 	label = imagePath.split(os.path.sep)[-2]
-	print(label)
 	trainLabels.append(label)
 
 # loop over the validation images
@@ -114,6 +112,8 @@ valLabels = np.array(valLabels)
 trainY = to_categorical(trainLabels, num_classes=94)
 # testY = to_categorical(testY, num_classes=94)
 valY = to_categorical(valLabels, num_classes=94)
+
+print(max(trainY), max(valY))
 
 # print("Training size: ",str(int(100*trainX.size/data.size)),"%")
 # print("Test size: ",str(int(100*testX.size/data.size)),"%")

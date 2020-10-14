@@ -73,7 +73,7 @@ for imName in listIm:
   orig = image.copy()
 
   # pre-process the image for classification
-  image = cv2.resize(image, (200, 200)) # 28,28
+  image = cv2.resize(image, (50, 50)) # 28,28
   image = image.astype("float") / 255.0
   image = img_to_array(image)
   image = np.expand_dims(image, axis=0)
